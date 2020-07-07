@@ -20,7 +20,8 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.pre('save', function(next) {
-    if(!this.isModified('password')) return next();
+    if(!this.isModified('password'))
+        return next();
 
     bcrypt.hash(this.password, 10, (err, hashedPass) => {
         if(err) return next(err);
@@ -31,9 +32,13 @@ UserSchema.pre('save', function(next) {
 
 UserSchema.methods.comparePassword = function(password, callback) {
     bcrypt.compare(password, this.password, (err, isMatch) => {
-        if(err) return callback(err);
+        if(err)
+            return callback(err);
         else{
-            if(!isMatch) return callback(null, isMatch);
+            if(!isMatch)
+                return callback(null, isMatch);
+
+            // callback (no error, user object)
             return callback(null, this);
         }
     });
