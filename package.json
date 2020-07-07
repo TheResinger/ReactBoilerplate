@@ -1,0 +1,27 @@
+{
+  "name": "ReactBoilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to build future react applications off of using the MERN stack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon app.js",
+    "start" : "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheResinger/ReactBoilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheResinger/ReactBoilerplate/issues"
+  },
+  "homepage": "https://github.com/TheResinger/ReactBoilerplate#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.22"
+  }
+}
